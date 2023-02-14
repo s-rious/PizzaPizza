@@ -29,7 +29,7 @@ if (isset($_POST['create'])) {
     $crust1 = floatval($_POST['crust']);
     $price = $_POST['price'] = $crust1 + $cheeses1 + $toppings1;
 
-    $query = "INSERT INTO orders(firstname,lastname,email,crust,crust_name,cheeses,toppings,price) VALUES('{$fname}','{$lname}','{$email}','{$crust}','{$crust_name}','{$cheeses}','{$toppings}','{$price}')";
+    $query = "INSERT INTO orders(firstname,lastname,email,crust,cheeses,toppings,price) VALUES('{$fname}','{$lname}','{$email}','{$crust}','{$cheeses}','{$toppings}','{$price}')";
     $add_student = mysqli_query($conn, $query);
 
     header("Location: cart.php");
